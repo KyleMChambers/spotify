@@ -82,25 +82,3 @@ all_songs = pd.DataFrame(
 
 all_songs_saved = all_songs.to_csv('top50_songs_medium.csv')
 
-
-#original below
-#----------------------------
-# if token:
-#     sp = spotipy.Spotify(auth=token)
-#     sp.trace = False
-#     ranges = ['short_term', 'medium_term', 'long_term']
-#     for range in ranges:
-#         print("range:", range)
-#         results = sp.current_user_top_tracks(time_range=range, limit=50)
-#         list = []
-#         list.append(results)
-#         with open('top50_data.json', 'w', encoding='utf-8') as f:
-#             json.dump(list, f, ensure_ascii=False, indent=4)
-#         for i, item in enumerate(results['items']):
-#             print(i, item['name'], '//', item['artists'][0]['name'])
-#         print()
-#
-#
-# else:
-#     print("Can't get token for", username)
-# ----------------------------
